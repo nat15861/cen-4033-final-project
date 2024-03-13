@@ -33,15 +33,18 @@ public class Question
         this.explanation = explanation;
     }
 
+    // Adds new answer for the question
     public void AddAnswer(string answer, bool correct)
     {
         answers.Add(answer);
 
+        // If this answer is correct, its index is added to the correct answers list
         if(correct) 
         {
             correctAnswers.Add(answers.Count - 1);
         }
 
+        // If the number of correct answers is greater than 1, that means this question is multi-select
         if(correctAnswers.Count > 1)
         {
             multiSelect = true;

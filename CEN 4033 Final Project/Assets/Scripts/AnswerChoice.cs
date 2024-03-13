@@ -29,8 +29,11 @@ public class AnswerChoice : MonoBehaviour, IPointerClickHandler
 
     public bool selected = false;
 
+
     void Awake()
     {
+        // Grabbing our components
+
         choiceText = GetComponentInChildren<TextMeshProUGUI>();
 
         image = GetComponent<Image>();
@@ -38,6 +41,7 @@ public class AnswerChoice : MonoBehaviour, IPointerClickHandler
         correctIconImage = transform.Find("Correct Icon").GetComponent<Image>();
     }
 
+    // Initializing the answer choice with the given fields
     public void Init(string text, bool correct, DisplayManager manager)
     {
         choiceText.text = text;
@@ -59,6 +63,7 @@ public class AnswerChoice : MonoBehaviour, IPointerClickHandler
         
     }
 
+    // Selects this answer choice
     public void Select()
     {
         selected = true;
@@ -66,6 +71,7 @@ public class AnswerChoice : MonoBehaviour, IPointerClickHandler
         image.color = selectedColor;
     }
 
+    // Deselects this answer choice
     public void Deselect()
     {
         selected = false;
@@ -73,8 +79,10 @@ public class AnswerChoice : MonoBehaviour, IPointerClickHandler
         image.color = defaultColor;
     }
 
+    // Reveals whether or not this answer choice was correct
     public void Reveal()
     {
+        // Selected answers will display red or green depending on if they were correct
         if (selected)
         {
             if (correct)
@@ -87,13 +95,14 @@ public class AnswerChoice : MonoBehaviour, IPointerClickHandler
             }
         }
         
-
+        // Correct answers will display a checkmark next to them
         if (correct)
         {
             correctIconImage.enabled = true;
         }
     }
 
+    // Handles button clicks on this answer choice
     public void OnPointerClick(PointerEventData eventData)
     {
         if (manager.state == DisplayManager.State.Explain) return;

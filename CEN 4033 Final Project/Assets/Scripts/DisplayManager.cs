@@ -41,6 +41,7 @@ public class DisplayManager : MonoBehaviour
         
     }
 
+    // Handles button clicks on a particular answer choice
     public void ToggleChoice(AnswerChoice choice)
     {
         // If we are selecting this choice and the question isn't multi-choice, we need to deselect all the other choices 
@@ -83,23 +84,29 @@ public class DisplayManager : MonoBehaviour
         submitButton.interactable = submitButtonActive;
     }
 
+    // Gives feedback to the user once the submit button is pressed
     public void SubmitAnswer()
     {
         if (state == State.Explain) return;
 
 
+        // Show the question explanation in the title
         questionTitleText.text = currentQuestion.explanation;
 
+        // Reveal all of the correct answers
         for (int i = 0; i < choices.Count; i++)
         {
             choices[i].Reveal();
         }
 
+        // Enable the next button
         nextButton.Enable();
 
+        // Update the state
         state = State.Explain;
     }
 
+    // Switches to the next question if there is one
     public void NextQuestion()
     {
         if (++questionIndex >= questionManager.questions.Count)
@@ -116,14 +123,15 @@ public class DisplayManager : MonoBehaviour
         }
     }
 
-
+    // Displays the current question on the display by updating the title and the answer choices
     private void DisplayQuestion(int index)
     {
         currentQuestion = questionManager.questions[index];
 
-        
+        // Updating the title
         questionTitleText.text = currentQuestion.question;
 
+        // Initializing the answer choices
         for(int i = 0; i < choices.Count; i++)
         {
             choices[i].Init(currentQuestion.answers[i], currentQuestion.correctAnswers.Contains(i), this);
