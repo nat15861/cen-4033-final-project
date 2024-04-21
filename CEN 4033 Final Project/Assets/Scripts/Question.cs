@@ -15,6 +15,8 @@ public class Question
 
     public bool multiSelect;
 
+    public int index;
+
     public Question()
     {
         answers = new List<string>();

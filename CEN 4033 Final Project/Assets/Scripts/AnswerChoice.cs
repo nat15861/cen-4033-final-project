@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class AnswerChoice : MonoBehaviour, IPointerClickHandler
 {
-    private DisplayManager manager;
+    private QuizManager manager;
 
     private TextMeshProUGUI choiceText;
 
@@ -42,7 +42,7 @@ public class AnswerChoice : MonoBehaviour, IPointerClickHandler
     }
 
     // Initializing the answer choice with the given fields
-    public void Init(string text, bool correct, DisplayManager manager)
+    public void Init(string text, bool correct, QuizManager manager)
     {
         choiceText.text = text;
 
@@ -105,7 +105,7 @@ public class AnswerChoice : MonoBehaviour, IPointerClickHandler
     // Handles button clicks on this answer choice
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (manager.state == DisplayManager.State.Explain) return;
+        if (manager.state == QuizManager.State.Explain) return;
 
         manager.ToggleChoice(this);
     }

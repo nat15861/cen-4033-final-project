@@ -10,6 +10,12 @@ using UnityEngine.UI;
 
 public class LoginManager : MonoBehaviour
 {
+    public PlayerManager playerManager;
+
+    public MainMenuManager menuManager;
+
+    public Image backgroundImage;
+
     public TextMeshProUGUI loginText;
 
     public TextMeshProUGUI signUpText;
@@ -52,13 +58,14 @@ public class LoginManager : MonoBehaviour
 
     void SetupEvents()
     {
-        AuthenticationService.Instance.SignedIn += () => {
-            // Shows how to get a playerID
-            Debug.Log($"PlayerID: {AuthenticationService.Instance.PlayerId}");
+        AuthenticationService.Instance.SignedIn += async () => {
+            print($"PlayerID: {AuthenticationService.Instance.PlayerId}");
 
-            // Shows how to get an access token
-            Debug.Log($"Access Token: {AuthenticationService.Instance.AccessToken}");
+            print($"Access Token: {AuthenticationService.Instance.AccessToken}");
 
+            await playerManager.GetPlayerInfo(AuthenticationService.Instance.PlayerId, AuthenticationService.Instance.AccessToken);
+
+            menuManager.FinishLogin();
         };
 
         AuthenticationService.Instance.SignInFailed += (err) => {
@@ -67,6 +74,8 @@ public class LoginManager : MonoBehaviour
 
         AuthenticationService.Instance.SignedOut += () => {
             Debug.Log("Player signed out.");
+
+            menuManager.LogOut();
         };
 
         AuthenticationService.Instance.Expired += () =>
@@ -85,6 +94,30 @@ public class LoginManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OpenWindow()
+    {
+        backgroundImage.enabled = true;
+
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
+    }
+
+    public void CloseWindow()
+    {
+        backgroundImage.enabled = false;
+
+        usernameField.text = "";
+
+        passwordField.text = "";
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 
     public void ChangeMode(int intMode)
@@ -150,11 +183,13 @@ public class LoginManager : MonoBehaviour
         }
     }
 
+
     async Task SignUpWithUsernamePasswordAsync(string username, string password)
     {
         try
         {
             await AuthenticationService.Instance.SignUpWithUsernamePasswordAsync(username, password);
+            
             Debug.Log("SignUp is successful.");
         }
         catch (AuthenticationException ex)
@@ -176,6 +211,7 @@ public class LoginManager : MonoBehaviour
         try
         {
             await AuthenticationService.Instance.SignInWithUsernamePasswordAsync(username, password);
+            
             Debug.Log("SignIn is successful.");
         }
         catch (AuthenticationException ex)
@@ -188,6 +224,20 @@ public class LoginManager : MonoBehaviour
         {
             // Compare error code to CommonErrorCodes
             // Notify the player with the proper error message
+            Debug.LogException(ex);
+        }
+    }
+
+    public void SignOut()
+    {
+        try
+        {
+            AuthenticationService.Instance.SignOut(true);
+
+            Debug.Log("Sign Out was successful.");
+        }
+        catch (Exception ex)
+        {
             Debug.LogException(ex);
         }
     }

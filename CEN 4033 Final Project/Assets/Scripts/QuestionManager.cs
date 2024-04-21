@@ -28,6 +28,8 @@ public class QuestionManager : MonoBehaviour
         // Splitting the file information into individual lines
         string[] questionLines = questionText.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 
+        int index = 0;
+
         Question question = new Question();
 
         // Going through all the lines and using them to add attributes to new question objects
@@ -40,6 +42,8 @@ public class QuestionManager : MonoBehaviour
             if (line[0] == 'Q' && question.question == null && question.answers.Count == 0 && question.explanation == null)
             {
                 question.question = line.Substring(3);
+
+                question.index = index++;
             }
             else if (line[0] == 'C' && question.explanation == null)
             {

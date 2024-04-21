@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayManager : MonoBehaviour
+public class QuizManager : MonoBehaviour
 {
     public QuestionManager questionManager;
 
