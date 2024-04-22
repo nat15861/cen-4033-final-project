@@ -26,7 +26,18 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
-        loginManager.OpenWindow();
+        if(PlayerManager.instance.playerId != "")
+        {
+            menuOptions.SetActive(true);
+
+            signedInDisplay.SetActive(true);
+
+            state = State.Menu;
+        }
+        else
+        {
+            loginManager.OpenWindow();
+        }
     }
      
     void Update()
@@ -50,6 +61,8 @@ public class MainMenuManager : MonoBehaviour
         PlayerManager.instance.ClearPlayerData();
 
         accountWindow.SetActive(false);
+
+
 
         loginManager.OpenWindow();
 

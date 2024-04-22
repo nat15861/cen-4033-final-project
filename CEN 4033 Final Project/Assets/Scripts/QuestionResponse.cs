@@ -9,10 +9,14 @@ public class QuestionResponse
 
     public List<int> userAnswers;
 
-    public QuestionResponse(Question question, List<int> userAnswers)
+    public float points;
+
+    public QuestionResponse(Question question, List<int> userAnswers, float points)
     {
         this.question = question;
 
         this.userAnswers = userAnswers;
+
+        this.points = points;
     } 
 }

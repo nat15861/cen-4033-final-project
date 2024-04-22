@@ -12,8 +12,6 @@ public class AccountWindow : MonoBehaviour
         accountInfo.text = "Username: " + PlayerManager.instance.username +
                            "\nPlayer ID: " + PlayerManager.instance.playerId +
                            "\nAccess Token: " + PlayerManager.instance.accessToken;
-
-        print("hi");
     }
 
     void Start()

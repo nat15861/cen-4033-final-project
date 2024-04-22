@@ -575,6 +575,7 @@ MonoBehaviour:
   playerId: 
   accessToken: 
   username: 
+  questionResponses: []
 --- !u!4 &101131319
 Transform:
   m_ObjectHideFlags: 0

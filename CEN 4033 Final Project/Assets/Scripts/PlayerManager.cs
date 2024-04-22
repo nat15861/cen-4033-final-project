@@ -16,10 +16,17 @@ public class PlayerManager : MonoBehaviour
 
     public string username;
 
-    //private 
+    public List<QuestionResponse> questionResponses = new List<QuestionResponse>();
 
     private void Awake()
     {
+        if(instance != null)
+        {
+            Destroy(gameObject);
+
+            return;
+        }
+
         instance = this;
 
         DontDestroyOnLoad(gameObject);
@@ -39,7 +46,7 @@ public class PlayerManager : MonoBehaviour
         {
             print("saving");
 
-            SaveData();
+            //SaveData();
         }
 
         if (Input.GetKeyDown("l"))
@@ -50,19 +57,30 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public async void SaveData()
+    public void AddQuestionResponse(QuestionResponse questionResponse)
     {
-        var data = new Dictionary<string, object> { { "keyName2", new Question("What's 9 + 10", new List<string>() { "3", "7", "9", "19"}, new List<int>() { 3 }, "9 + 10 is 19") } };
-        var asdf = new Dictionary<string, object> { { "keyName3", new Question[] { new Question("asdf", new List<string>() { "3" }, new List<int>() { 0 }, "ssdf"), new Question("aasdfsdf", new List<string>() { "5" }, new List<int>() { 0 }, "ssd4545f") } } };
+        questionResponses.Add(questionResponse);
+    }
+
+    public void SubmitQuiz(float score)
+    {
+        SaveData("Quiz1", (questionResponses.ToArray(), score));
+    }
+
+    public async void SaveData(string key, (QuestionResponse[], float) quiz)
+    {
+        //var data = new Dictionary<string, object> { { "keyName2", new Question("What's 9 + 10", new List<string>() { "3", "7", "9", "19"}, new List<int>() { 3 }, "9 + 10 is 19") } };
+        //var asdf = new Dictionary<string, object> { { "keyName3", (new Question[] { new Question("asdf", new List<string>() { "3" }, new List<int>() { 0 }, "ssdf"), new Question("aasdfsdf", new List<string>() { "5" }, new List<int>() { 0 }, "ssd4545f") }, 1) } };
+
+        var data = new Dictionary<string, object> { { key, quiz } };
 
         try
         {
-            await CloudSaveService.Instance.Data.Player.SaveAsync(asdf);
+            await CloudSaveService.Instance.Data.Player.SaveAsync(data);
         }
         catch (Exception ex)
         {
             Debug.LogException(ex);
-
         }
 
     }
@@ -71,13 +89,18 @@ public class PlayerManager : MonoBehaviour
     {
         try
         {
-            var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> { "keyName2" });
+            var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> { "Quiz1" });
 
-            if (playerData.TryGetValue("keyName3", out var keyName))
+            if (playerData.TryGetValue("Quiz1", out var keyName))
             {
-                Debug.Log($"keyName: {keyName.Value.GetAs<Question[]>()}");
-                Debug.Log($"keyName: {keyName.Value.GetAs<Question[]>()[0].question}");
-                Debug.Log($"keyName: {keyName.Value.GetAs<Question[]>()[1].question}");
+                Debug.Log($"keyName: {keyName.Value.GetAs<(QuestionResponse[] questionResponses, float score)>()}");
+                Debug.Log($"keyName: {keyName.Value.GetAs<(QuestionResponse[] questionResponses, float score)>().score}");
+                Debug.Log($"keyName: {keyName.Value.GetAs<(QuestionResponse[] questionResponses, float score)>().questionResponses}");
+                Debug.Log($"keyName: {keyName.Value.GetAs<(QuestionResponse[] questionResponses, float score)>().questionResponses[0]}");
+                Debug.Log($"keyName: {keyName.Value.GetAs<(QuestionResponse[] questionResponses, float score)>().questionResponses[0].points}");
+                Debug.Log($"keyName: {keyName.Value.GetAs<(QuestionResponse[] questionResponses, float score)>().questionResponses[0].userAnswers}");
+                Debug.Log($"keyName: {keyName.Value.GetAs<(QuestionResponse[] questionResponses, float score)>().questionResponses[0].question}");
+                Debug.Log($"keyName: {keyName.Value.GetAs<(QuestionResponse[] questionResponses, float score)>().questionResponses[0].question.question}");
             }
             else
             {

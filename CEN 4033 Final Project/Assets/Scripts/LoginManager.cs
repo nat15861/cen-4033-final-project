@@ -7,11 +7,10 @@ using Unity.Services.Authentication;
 using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class LoginManager : MonoBehaviour
 {
-    public PlayerManager playerManager;
-
     public MainMenuManager menuManager;
 
     public Image backgroundImage;
@@ -42,8 +41,15 @@ public class LoginManager : MonoBehaviour
         SignUp
     }
 
-    async void Awake()
+    async void InitializeLogin()
     {
+        if (PlayerManager.instance.playerId != "")
+        {
+            SetupEvents();
+
+            return;
+        }
+
         try
         {
             await UnityServices.InitializeAsync();
@@ -56,27 +62,16 @@ public class LoginManager : MonoBehaviour
         SetupEvents();
     }
 
+
     void SetupEvents()
     {
-        AuthenticationService.Instance.SignedIn += async () => {
-            print($"PlayerID: {AuthenticationService.Instance.PlayerId}");
-
-            print($"Access Token: {AuthenticationService.Instance.AccessToken}");
-
-            await playerManager.GetPlayerInfo(AuthenticationService.Instance.PlayerId, AuthenticationService.Instance.AccessToken);
-
-            menuManager.FinishLogin();
-        };
+        AuthenticationService.Instance.SignedIn += SignedInCallback;
 
         AuthenticationService.Instance.SignInFailed += (err) => {
             Debug.LogError(err);
         };
 
-        AuthenticationService.Instance.SignedOut += () => {
-            Debug.Log("Player signed out.");
-
-            menuManager.LogOut();
-        };
+        AuthenticationService.Instance.SignedOut += SignedOutCallback;
 
         AuthenticationService.Instance.Expired += () =>
         {
@@ -84,8 +79,35 @@ public class LoginManager : MonoBehaviour
         };
     }
 
+    private void OnDisable()
+    {
+        AuthenticationService.Instance.SignedIn -= SignedInCallback;
+
+        AuthenticationService.Instance.SignedOut -= SignedOutCallback;
+    }
+
+    private async void SignedInCallback()
+    {
+        print($"PlayerID: {AuthenticationService.Instance.PlayerId}");
+
+        print($"Access Token: {AuthenticationService.Instance.AccessToken}");
+
+        await PlayerManager.instance.GetPlayerInfo(AuthenticationService.Instance.PlayerId, AuthenticationService.Instance.AccessToken);
+
+        menuManager.FinishLogin();
+    }
+
+    private void SignedOutCallback()
+    {
+        Debug.Log("Player signed out.");
+
+        menuManager.LogOut();
+    }
+
     void Start()
     {
+        InitializeLogin();
+
         UpdateModeButtons();
 
         submitButton.interactable = false;
@@ -240,5 +262,6 @@ public class LoginManager : MonoBehaviour
         {
             Debug.LogException(ex);
         }
+
     }
 }
