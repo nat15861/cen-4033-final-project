@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,6 +24,8 @@ public class QuizManager : MonoBehaviour
 
     public TextMeshProUGUI quizScoreText;
 
+    public Question[] questions;
+
     public Question currentQuestion;
 
     public int questionIndex = 0;
@@ -41,6 +44,8 @@ public class QuizManager : MonoBehaviour
     void Start()
     {
         questionManager.Init();
+
+        SelectQuestions();
 
         DisplayQuestion(questionIndex);
     }
@@ -142,6 +147,8 @@ public class QuizManager : MonoBehaviour
         // The amount of points each answer will give. Each correct answer will add this amount, and each incorrect answer will subtract this amount
         float answerPoints = 1f / currentQuestion.correctAnswers.Count;
 
+
+
         for(int i = 0; i < userAnswers.Count; i++)
         {
             if (currentQuestion.correctAnswers.Contains(userAnswers[i]))
@@ -154,19 +161,75 @@ public class QuizManager : MonoBehaviour
             }
         }
 
-        return Mathf.Max(points, 0);
+
+        return Mathf.Max((float)System.Math.Round(points, 2), 0);
     }
+
+    private void SelectQuestions()
+    {
+        List<int> availableIndexes = new List<int>();
+
+        for(int i = 0; i < questionManager.questions.Count; i++)
+        {
+            availableIndexes.Add(i);
+        }
+
+
+        int[] questionIndexes = new int[10];
+
+        for(int i = 0; i < questionIndexes.Length; i++)
+        {
+            int randIndex = Random.Range(0, availableIndexes.Count);
+
+            questionIndexes[i] = availableIndexes[randIndex];
+
+            availableIndexes.RemoveAt(randIndex);
+        }
+
+
+        questions = new Question[questionIndexes.Length];
+
+        for(int i = 0; i < questions.Length; i++)
+        {
+            /*if(i == 0)
+            {
+                questions[i] = questionManager.questions[6];
+
+                continue;
+            }*/
+
+            questions[i] = questionManager.questions[questionIndexes[i]];
+        }
+    }
+
+    // Displays the current question on the display by updating the title and the answer choices
+    private void DisplayQuestion(int index)
+    {
+        currentQuestion = questions[index];
+
+        // Updating the title
+        questionTitleText.text = currentQuestion.question;
+
+        // Initializing the answer choices
+        for (int i = 0; i < choices.Count; i++)
+        {
+            choices[i].Init(currentQuestion.answers[i], currentQuestion.correctAnswers.Contains(i), this);
+        }
+    }
+
 
     // Switches to the next question if there is one
     public void NextQuestion()
     {
-        if (++questionIndex >= questionManager.questions.Count)
+        if (++questionIndex >= questions.Length)
         {
             questionDisplay.SetActive(false);
 
             quizResults.SetActive(true);
 
-            score = (float)System.Math.Round(score, 1);
+            score = (float)System.Math.Round(score, 2);
+
+            print(score);
 
             quizScoreText.text = "Score: " + score + "/10";
 
@@ -182,25 +245,19 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    // Displays the current question on the display by updating the title and the answer choices
-    private void DisplayQuestion(int index)
-    {
-        currentQuestion = questionManager.questions[index];
-
-        // Updating the title
-        questionTitleText.text = currentQuestion.question;
-
-        // Initializing the answer choices
-        for(int i = 0; i < choices.Count; i++)
-        {
-            choices[i].Init(currentQuestion.answers[i], currentQuestion.correctAnswers.Contains(i), this);
-        }
-    }
+  
 
     public void LoadMainMenu()
     {
         PlayerManager.instance.questionResponses = new List<QuestionResponse>();
 
         SceneManager.LoadScene(0);
+    }
+
+    public void PlayAgain()
+    {
+        PlayerManager.instance.questionResponses = new List<QuestionResponse>();
+
+        SceneManager.LoadScene(1);
     }
 }

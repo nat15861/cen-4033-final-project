@@ -28,15 +28,13 @@ public class MainMenuManager : MonoBehaviour
     {
         if(PlayerManager.instance.playerId != "")
         {
+            loginManager.CloseWindow();
+
             menuOptions.SetActive(true);
 
             signedInDisplay.SetActive(true);
 
             state = State.Menu;
-        }
-        else
-        {
-            loginManager.OpenWindow();
         }
     }
      

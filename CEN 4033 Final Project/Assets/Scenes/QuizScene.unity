@@ -321,13 +321,13 @@ MonoBehaviour:
   - {fileID: 1087706046}
   - {fileID: 2081151470}
   quizScoreText: {fileID: 1775635430}
+  questions: []
   currentQuestion:
     question: 
     answers: []
     correctAnswers: 
     explanation: 
     multiSelect: 0
-    index: 0
   questionIndex: 0
   score: 0
   state: 0
@@ -1055,7 +1055,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 200}
+  m_SizeDelta: {x: 1600, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737020933
 MonoBehaviour:
@@ -1106,11 +1106,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 72
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 36
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bdc2d29d96bfa438b94716c444a247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionData: {fileID: 4900000, guid: 13c43c66905640a46a25471b59fd7567, type: 3}
+  questionData: {fileID: 4900000, guid: 8b369ff3122d5c445ad1ce3634340c45, type: 3}
   questions: []
 --- !u!4 &1796111867
 Transform:
@@ -2451,7 +2451,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083097933}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 128242686}
+        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2083097933
 MonoBehaviour:
   m_ObjectHideFlags: 0

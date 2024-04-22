@@ -1,0 +1,14 @@
+Q: What is the capital of Florida?
+I: Miami
+I: Orlando
+C: Tallahassee
+I: Texas
+E: The capital of Florida is Tallahassee
+
+
+Q: Which politicians served as president of the United States (select all that apply)
+I: Hilary Clinton
+C: Barak Obama
+I: Elvis Presley
+C: Abraham Lincoln
+E: Both Barak Obama and Abraham Lincoln served as presidents of the United States

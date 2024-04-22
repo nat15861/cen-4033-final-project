@@ -41,7 +41,42 @@ public class LoginManager : MonoBehaviour
         SignUp
     }
 
-    async void InitializeLogin()
+    private async void SignedInCallback()
+    {
+        print($"PlayerID: {AuthenticationService.Instance.PlayerId}");
+
+        print($"Access Token: {AuthenticationService.Instance.AccessToken}");
+
+        await PlayerManager.instance.GetPlayerInfo(AuthenticationService.Instance.PlayerId, AuthenticationService.Instance.AccessToken);
+
+        menuManager.FinishLogin();
+    }
+
+    private void SignedOutCallback()
+    {
+        Debug.Log("Player signed out.");
+
+        menuManager.LogOut();
+    }
+
+    private void SetupEvents()
+    {
+        AuthenticationService.Instance.SignedIn += SignedInCallback;
+
+        AuthenticationService.Instance.SignInFailed += (err) => {
+            Debug.LogError(err);
+        };
+
+        AuthenticationService.Instance.SignedOut += SignedOutCallback;
+
+        AuthenticationService.Instance.Expired += () =>
+        {
+            Debug.Log("Player session could not be refreshed and expired.");
+        };
+    }
+
+
+    private async void InitializeLogin()
     {
         if (PlayerManager.instance.playerId != "")
         {
@@ -60,48 +95,6 @@ public class LoginManager : MonoBehaviour
         }
 
         SetupEvents();
-    }
-
-
-    void SetupEvents()
-    {
-        AuthenticationService.Instance.SignedIn += SignedInCallback;
-
-        AuthenticationService.Instance.SignInFailed += (err) => {
-            Debug.LogError(err);
-        };
-
-        AuthenticationService.Instance.SignedOut += SignedOutCallback;
-
-        AuthenticationService.Instance.Expired += () =>
-        {
-            Debug.Log("Player session could not be refreshed and expired.");
-        };
-    }
-
-    private void OnDisable()
-    {
-        AuthenticationService.Instance.SignedIn -= SignedInCallback;
-
-        AuthenticationService.Instance.SignedOut -= SignedOutCallback;
-    }
-
-    private async void SignedInCallback()
-    {
-        print($"PlayerID: {AuthenticationService.Instance.PlayerId}");
-
-        print($"Access Token: {AuthenticationService.Instance.AccessToken}");
-
-        await PlayerManager.instance.GetPlayerInfo(AuthenticationService.Instance.PlayerId, AuthenticationService.Instance.AccessToken);
-
-        menuManager.FinishLogin();
-    }
-
-    private void SignedOutCallback()
-    {
-        Debug.Log("Player signed out.");
-
-        menuManager.LogOut();
     }
 
     void Start()
@@ -212,7 +205,7 @@ public class LoginManager : MonoBehaviour
         {
             await AuthenticationService.Instance.SignUpWithUsernamePasswordAsync(username, password);
             
-            Debug.Log("SignUp is successful.");
+            Debug.Log("Sign up was successful.");
         }
         catch (AuthenticationException ex)
         {
@@ -234,7 +227,7 @@ public class LoginManager : MonoBehaviour
         {
             await AuthenticationService.Instance.SignInWithUsernamePasswordAsync(username, password);
             
-            Debug.Log("SignIn is successful.");
+            Debug.Log("Sign in was successful.");
         }
         catch (AuthenticationException ex)
         {
@@ -256,12 +249,19 @@ public class LoginManager : MonoBehaviour
         {
             AuthenticationService.Instance.SignOut(true);
 
-            Debug.Log("Sign Out was successful.");
+            Debug.Log("Sign out was successful.");
         }
         catch (Exception ex)
         {
             Debug.LogException(ex);
         }
 
+    }
+
+    private void OnDisable()
+    {
+        AuthenticationService.Instance.SignedIn -= SignedInCallback;
+
+        AuthenticationService.Instance.SignedOut -= SignedOutCallback;
     }
 }

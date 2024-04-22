@@ -1,14 +1,132 @@
-Q: What is the capital of Florida?
-I: Miami
-I: Orlando
-C: Tallahassee
-I: Texas
-E: The capital of Florida is Tallahassee
+Q: Which of these passwords would be the "safest"
+I: Dog
+I: SusanPassword
+C: NintendogIsGreat@197@
+I: BoardFire57
+E: NintendogIsGreat@197@ is the "safest" password since it contains the most characters, has 3 numbers, and contains 2 special characters
 
+Q: What is a social Engineering attack?
+I: When someone guesses your password
+C: Using social manipulation to trick people into giving away important security details and sensitive information
+I: Using social manipulation to trick people into buying bad products online
+I: hacking into a database to sell user data
+E: Social Engineering attacks are when a amlicious individual attempts to trick a user using social manipulation into giving away important security details and other sensitive information
 
-Q: Which politicians served as president of the United States (select all that apply)
-I: Hilary Clinton
-C: Barak Obama
-I: Elvis Presley
-C: Abraham Lincoln
-E: Both Barak Obama and Abraham Lincoln served as presidents of the United States
+Q: You are called on the phone and told that your account has been comprimised.  They ask for your full name and date of birth to verify your identity.  How should you respond?
+I: Tell them your name, date of birth and address to really verify yourself.
+I: Tell them your name and date of birth to verify your identity.
+C: Refuse to share your information without them verifying their authenticity.
+I: Ask for their name fist then share yours.
+E: You should never share personal information on the phone unless you are absolutely sure the individual is who they claim they are.
+
+Q: You receive a phone call from an unknown number. The caller knows your name and your mother's name. They tell you that she has just been in an accident and is currently unresponsive at the hospital. They found your number in her emergency contacts and called you for help. The caller explains that the hospital cannot treat her without an upfront payment but offers to pay on your behalf if you can send him the money immediately. What should you do?
+I: Send the money to the caller immediately to ensure your mother receives the necessary medical treatment.
+C: Get the hospital's name and location from the caller then look up their number to call them yourself.
+I: Provide your credit card details over the phone to the caller so they can handle the payment directly with the hospital.
+I: Ask the caller for the hospital’s account details to transfer the money directly to them instead.
+E: You should never trust a stanger calling you and asking for money even if they claim the situation is dire.  Make sure to verify the situation through the right channels.
+
+Q: The company just got gifted a box of free usb sticks all with different fun designs for people to use.  What should you do with them?
+C: Don't let anyone use them without making sure whatever on them is safe.
+I: Pass them out to everyone so they can have cool new usb sticks.
+I: Plug them into everyone's computer so they can use them right away.
+I: Put a sign on it saying "Free usb sticks! Take one!"
+E: You shouldn't use usb sticks without first knowing what is on them.  It could have malicious content that activates upon being put into a computer.
+
+Q: You are walking down the street when you see a card on the floor.  Upon inspection it is a 100$ prize card.  It requires you to go to a website you havent heard of before to put the code in and claim the money.  What should you do?
+I: Use an incognito tab to go to teh website.
+I: Go to the website and input the code for your free money.
+C: Research the legitimacy of the card and the website by looking up reviews or reports online from reliable sources. 
+I: Go to the website and input the code but if they ask for credit card information don't give them it.
+E: You should never go to an unknown website without at least first researching their authenticity. 
+
+Q: The previous question asked about going to an unknown website to claim a prize.  In what ways could the website be malicious. (you can select multiple)
+C: Visiting the website will endlessly open additional tabs that all play fart sounds until your computer crashes.
+C: Visiting the website will download malicious software into your computer.
+C: The website will ask for credit card information to reward you but actually it will steal your card information.
+I: The website will display a weird image and play a weird song.
+E: Malicious websites have many ways of influencing your computed in bad ways.  Opening tabs until it crashes, downloading malicious software, and trying to steal your credit card information are just 3 of them.
+
+Q: Your friend messages you and sends you a file to download.  He says hes been working on a game and wants you to be teh first to try it.  What should you do?
+I: Download and try out his new game.
+C: Refuse to download the file unless hes able to verify its contents.
+I: Download the game is he agrees to be on a voice call with you.
+I: Ask him an identifying question to make sure its him then download it.
+E: You shouldnt trust files sent out of nowhere from someone.  Even if you get on a voice call with them, someone could be faking their voice to trick you.
+
+Q: If an employee fell for a social engineering attack in a banking company.  Which of the following information could be at risk?
+C: Customer Credit
+C: Employee name/address/pay
+C: Customer Bank account Details
+C: Bank Financial information
+E: Depending on the position of the employee, any of the listed information or more could be at risk.
+
+Q: What are the common methods of social engineering?
+I: Online/Phone
+C: Human Interaction
+I: Passive Attacks
+I: Lying Attacks
+E: The 3 common methods of social engineering are Online.Phone, Human Interaction, and Passive attacks.
+
+Q: You get an email that looks like it originates from Apple.  They say you have won a random phone give away but they need you to go to a link and fillout your personal information so it can get sent to you.  what should you do?
+I: Click on the link in the email and fill out the form with your personal information to claim your phone.
+C: Do not click on any links or provide any personal information. Verify the authenticity of the email by contacting Apple's official customer service.
+I: Forward the email to your friends and family so they can also participate in the giveaway.
+I: Reply to the email with your name, address, and phone number so they can send you the prize.
+E: Many email scams will try to get your personal information through giveaways so you should always verify one before giving any personal information.
+
+Q: The previous question addressed an email that seemed to originate from apple.  Assuming it is a social engineering attack attempt, what kind is it?
+I: Total Lie
+C: Phishing
+I: Pretexting
+I: Quid Pro Quo
+E: Phishing is when an email appears to be from a trustworthy source but is actually not and malicious.
+
+Q: How is vishing different from phishing?
+I: Vishing uses mailed letters.
+I: Vishing uses Videos.
+I: Vishing uses usb sticks.
+C: Vishing uses voice calls.
+E: Vishing is phishing but involving voice calls.
+
+Q: You are browsing websites when a popup shows up with a message saying you won a prize for being the 10000th visiter. You just need to download a prize wheel app to get your prize. What should you do?
+I: Click on the popup to download the app right away.
+C: Ignore the popup.
+I: Have a friend download the app for you.
+I: Click the popup but dont dwonaload so it gets off your screen.
+E: You should never click a popup asking you to downaload something.  Closing it or ignoring it is best.
+
+Q: What is cyber calling?
+C: A caller sounds professional and like they have good reason for calling and requesting details typically through skilled communication.
+I: A text message tells you to send your credit card details.
+I: A friend is tricked into giving away your personal information.
+I: A video game tries to steal your personal information.
+E: Cyber Calling is when a skilled caller sounds like a professional and makes good reason for calling and requesting personal information leading to a victim opeining up to them and possibly sharing personal information.
+
+Q: Which is an example of baiting? (Multiple Choice)
+C: A cool looking usb being left on a table.
+I: An email asking for money to be sent to a bank to repay credit.
+I: An email asking for money to be sent to a hospital.
+C: Leaving a giftcard on a street to be found.
+E: A left behind usb and a giftcard that could be used to get malicious software onto someones computer when used are good examples of baiting.  When someone intentionally leaves good looking items to be used by victims.
+
+Q: What is Tailgating?
+I: Driving too close behind another vehicle.
+C: An unauthorised person gains access to a restricted area typically by following an authorised person in.
+I: An email seems to be from a trusted organization but is not.
+I: A caller tried to trick someone into giving up personal information.
+E: Tailgating is when an attacker uses physical social interaction to try to slip into a restricted area by sticking close to an aunthorized person.
+
+Q: As your entering your workplace, someone a bit behidn you yells out to hold the door for a second.  The building requires an id to get in.  What should you do?
+I: Hold the door for them since its polite.
+I: Hold the door but make sure ot get their name in case they're a malicious person
+C: Don't hold the door.  Make sure they use their id to get in.
+I: Hold the door but ask to see their id to make sure.
+E: You can't be sure that someone who wnats into the building is someone who should be in the building.  Even checking if they have an id shouldn't be trusted sinc eit could be faked.  Make sure they get in the buidling after scanning their id.
+
+Q: Your entering your workplace and your coworker is entering with someone who you've never seen before.  You inquire who they are and are told they're a freind who wnated to see the inside of the building.  What potential social engineering risk does this have?
+I: No risk at all, its great to show a friend around the workplace.
+C: Theres a risk that even though they may seem like a friend, they actually ahve malicious intent inside the building.
+I: Its possible that they are sick.
+I: They could distract the workforce from doing their job.
+E: Anyone let into the buidling without proper authorization could be there for malicious reasons.  Even close friends shouldn't be let in without authorization.

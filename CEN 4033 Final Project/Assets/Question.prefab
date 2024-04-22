@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What is the capital of France?
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -152,9 +152,9 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 80.22
+  m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!1 &3814093918848067236
 GameObject:
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0.5 / 1 pts
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 220
+  m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Question 1
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -625,6 +625,7 @@ GameObject:
   - component: {fileID: 3814093920348776102}
   - component: {fileID: 3814093920348776103}
   - component: {fileID: 3814093920348776097}
+  - component: {fileID: 4000692261317354494}
   m_Layer: 5
   m_Name: Question
   m_TagString: Untagged
@@ -719,6 +720,35 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &4000692261317354494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814093920348776122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3351fd5060101904d8a5ed783f46558e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionNameText: {fileID: 3814093919378810039}
+  questionPointsText: {fileID: 3814093918848067238}
+  questionText: {fileID: 3814093918546651432}
+  question:
+    question: 
+    answers: []
+    correctAnswers: 
+    explanation: 
+    multiSelect: 0
+  userAnswers: 
+  points: 0
+  index: 0
+  answerChoices:
+  - {fileID: 1598206574734844982}
+  - {fileID: 61664397465800807}
+  - {fileID: 61664396751276234}
+  - {fileID: 61664397212405076}
 --- !u!1001 &2456864428413119386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -727,22 +757,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 3814093919105710875}
     m_Modifications:
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.r
-      value: 0.010130405
-      objectReference: {fileID: 0}
     - target: {fileID: 1654768402528208054, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -834,6 +848,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
+--- !u!114 &1598206574734844982 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3762037614569901996, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
+  m_PrefabInstance: {fileID: 2456864428413119386}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e3685cba6947942b033defc700ff6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3814093920626241324 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1654768402528208054, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
@@ -847,18 +872,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 3814093919105710875}
     m_Modifications:
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1654768402528208054, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -955,13 +968,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1654768403561286877, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_text
-      value: D. Florida
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
+--- !u!114 &61664397212405076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3762037614569901996, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
+  m_PrefabInstance: {fileID: 3814093918685528824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e3685cba6947942b033defc700ff6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2456864428617270862 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1654768402528208054, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
@@ -975,18 +995,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 3814093919105710875}
     m_Modifications:
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1654768402528208054, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1075,13 +1083,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Question Answer (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1654768403561286877, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_text
-      value: B. France
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
+--- !u!114 &61664397465800807 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3762037614569901996, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
+  m_PrefabInstance: {fileID: 3814093918935719883}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e3685cba6947942b033defc700ff6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2456864428870081405 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1654768402528208054, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
@@ -1095,22 +1110,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 3814093919105710875}
     m_Modifications:
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.29803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654768402528208053, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_Color.r
-      value: 0.010130405
-      objectReference: {fileID: 0}
     - target: {fileID: 1654768402528208054, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1203,13 +1202,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1654768403561286877, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
-      propertyPath: m_text
-      value: C. Denmark
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
+--- !u!114 &61664396751276234 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3762037614569901996, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
+  m_PrefabInstance: {fileID: 3814093920371918694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e3685cba6947942b033defc700ff6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2456864428155651024 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1654768402528208054, guid: 8bb9833fc16ab6c46a73004c9c2fd1a6, type: 3}
