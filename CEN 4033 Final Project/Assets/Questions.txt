@@ -10,13 +10,13 @@ I: When someone guesses your password
 C: Using social manipulation to trick people into giving away important security details and sensitive information
 I: Using social manipulation to trick people into buying bad products online
 I: hacking into a database to sell user data
-E: Social Engineering attacks are when a amlicious individual attempts to trick a user using social manipulation into giving away important security details and other sensitive information
+E: Social Engineering attacks are when a malicious individual attempts to trick a user using social manipulation into giving away important security details and other sensitive information
 
-Q: You are called on the phone and told that your account has been comprimised.  They ask for your full name and date of birth to verify your identity.  How should you respond?
+Q: You are called on the phone and told that your account has been compromised.  They ask for your full name and date of birth to verify your identity.  How should you respond?
 I: Tell them your name, date of birth and address to really verify yourself.
 I: Tell them your name and date of birth to verify your identity.
 C: Refuse to share your information without them verifying their authenticity.
-I: Ask for their name fist then share yours.
+I: Ask for their name first then share yours.
 E: You should never share personal information on the phone unless you are absolutely sure the individual is who they claim they are.
 
 Q: You receive a phone call from an unknown number. The caller knows your name and your mother's name. They tell you that she has just been in an accident and is currently unresponsive at the hospital. They found your number in her emergency contacts and called you for help. The caller explains that the hospital cannot treat her without an upfront payment but offers to pay on your behalf if you can send him the money immediately. What should you do?
@@ -24,35 +24,35 @@ I: Send the money to the caller immediately to ensure your mother receives the n
 C: Get the hospital's name and location from the caller then look up their number to call them yourself.
 I: Provide your credit card details over the phone to the caller so they can handle the payment directly with the hospital.
 I: Ask the caller for the hospital’s account details to transfer the money directly to them instead.
-E: You should never trust a stanger calling you and asking for money even if they claim the situation is dire.  Make sure to verify the situation through the right channels.
+E: You should never trust a stranger calling you and asking for money even if they claim the situation is dire.  Make sure to verify the situation through the right channels.
 
 Q: The company just got gifted a box of free usb sticks all with different fun designs for people to use.  What should you do with them?
-C: Don't let anyone use them without making sure whatever on them is safe.
+C: Don't let anyone use them without making sure whatever is on them is safe.
 I: Pass them out to everyone so they can have cool new usb sticks.
 I: Plug them into everyone's computer so they can use them right away.
 I: Put a sign on it saying "Free usb sticks! Take one!"
 E: You shouldn't use usb sticks without first knowing what is on them.  It could have malicious content that activates upon being put into a computer.
 
-Q: You are walking down the street when you see a card on the floor.  Upon inspection it is a 100$ prize card.  It requires you to go to a website you havent heard of before to put the code in and claim the money.  What should you do?
-I: Use an incognito tab to go to teh website.
+Q: You are walking down the street when you see a card on the floor.  Upon inspection it is a 100$ prize card.  It requires you to go to a website you haven't heard of before to put the code in and claim the money.  What should you do?
+I: Use an incognito tab to go to the website.
 I: Go to the website and input the code for your free money.
 C: Research the legitimacy of the card and the website by looking up reviews or reports online from reliable sources. 
 I: Go to the website and input the code but if they ask for credit card information don't give them it.
 E: You should never go to an unknown website without at least first researching their authenticity. 
 
-Q: The previous question asked about going to an unknown website to claim a prize.  In what ways could the website be malicious. (you can select multiple)
+Q:The previous question asked about going to an unknown website to claim a prize.  In what ways could the website be malicious? (you can select multiple)
 C: Visiting the website will endlessly open additional tabs that all play fart sounds until your computer crashes.
 C: Visiting the website will download malicious software into your computer.
 C: The website will ask for credit card information to reward you but actually it will steal your card information.
 I: The website will display a weird image and play a weird song.
-E: Malicious websites have many ways of influencing your computed in bad ways.  Opening tabs until it crashes, downloading malicious software, and trying to steal your credit card information are just 3 of them.
+E: Malicious websites have many ways of influencing your computer in bad ways.  Opening tabs until it crashes, downloading malicious software, and trying to steal your credit card information are just 3 of them.
 
-Q: Your friend messages you and sends you a file to download.  He says hes been working on a game and wants you to be teh first to try it.  What should you do?
+Q: Your friend messages you and sends you a file to download.  He says he's been working on a game and wants you to be the first to try it.  What should you do?
 I: Download and try out his new game.
-C: Refuse to download the file unless hes able to verify its contents.
-I: Download the game is he agrees to be on a voice call with you.
-I: Ask him an identifying question to make sure its him then download it.
-E: You shouldnt trust files sent out of nowhere from someone.  Even if you get on a voice call with them, someone could be faking their voice to trick you.
+C: Refuse to download the file unless he's able to verify its contents.
+I: Download the game if he agrees to be on a voice call with you.
+I: Ask him an identifying question to make sure it's him then download it.
+E: You shouldn't trust files sent out of nowhere from someone.  Even if you get on a voice call with them, someone could be faking their voice to trick you.
 
 Q: If an employee fell for a social engineering attack in a banking company.  Which of the following information could be at risk?
 C: Customer Credit
@@ -66,21 +66,14 @@ I: Online/Phone
 C: Human Interaction
 I: Passive Attacks
 I: Lying Attacks
-E: The 3 common methods of social engineering are Online.Phone, Human Interaction, and Passive attacks.
+E: The 3 common methods of social engineering are Online/Phone, Human Interaction, and Passive attacks.
 
-Q: You get an email that looks like it originates from Apple.  They say you have won a random phone give away but they need you to go to a link and fillout your personal information so it can get sent to you.  what should you do?
+Q: You get an email that looks like it originates from Apple.  They say you have won a random phone give away but they need you to go to a link and fill out your personal information so it can get sent to you.  What should you do?
 I: Click on the link in the email and fill out the form with your personal information to claim your phone.
 C: Do not click on any links or provide any personal information. Verify the authenticity of the email by contacting Apple's official customer service.
 I: Forward the email to your friends and family so they can also participate in the giveaway.
 I: Reply to the email with your name, address, and phone number so they can send you the prize.
 E: Many email scams will try to get your personal information through giveaways so you should always verify one before giving any personal information.
-
-Q: The previous question addressed an email that seemed to originate from apple.  Assuming it is a social engineering attack attempt, what kind is it?
-I: Total Lie
-C: Phishing
-I: Pretexting
-I: Quid Pro Quo
-E: Phishing is when an email appears to be from a trustworthy source but is actually not and malicious.
 
 Q: How is vishing different from phishing?
 I: Vishing uses mailed letters.
@@ -89,44 +82,121 @@ I: Vishing uses usb sticks.
 C: Vishing uses voice calls.
 E: Vishing is phishing but involving voice calls.
 
-Q: You are browsing websites when a popup shows up with a message saying you won a prize for being the 10000th visiter. You just need to download a prize wheel app to get your prize. What should you do?
+Q: You are browsing websites when a popup shows up with a message saying you won a prize for being the 10000th visitor. You just need to download a prize wheel app to get your prize. What should you do?
 I: Click on the popup to download the app right away.
 C: Ignore the popup.
 I: Have a friend download the app for you.
-I: Click the popup but dont dwonaload so it gets off your screen.
-E: You should never click a popup asking you to downaload something.  Closing it or ignoring it is best.
+I: Click the popup but don't download so it gets off your screen.
+E: You should never click a popup asking you to download something.  Closing it or ignoring it is best.
 
 Q: What is cyber calling?
 C: A caller sounds professional and like they have good reason for calling and requesting details typically through skilled communication.
 I: A text message tells you to send your credit card details.
 I: A friend is tricked into giving away your personal information.
 I: A video game tries to steal your personal information.
-E: Cyber Calling is when a skilled caller sounds like a professional and makes good reason for calling and requesting personal information leading to a victim opeining up to them and possibly sharing personal information.
+E: Cyber Calling is when a skilled caller sounds like a professional and makes a good reason for calling and requesting personal information leading to a victim opening up to them and possibly sharing personal information.
 
 Q: Which is an example of baiting? (Multiple Choice)
 C: A cool looking usb being left on a table.
 I: An email asking for money to be sent to a bank to repay credit.
 I: An email asking for money to be sent to a hospital.
 C: Leaving a giftcard on a street to be found.
-E: A left behind usb and a giftcard that could be used to get malicious software onto someones computer when used are good examples of baiting.  When someone intentionally leaves good looking items to be used by victims.
+E: A left behind usb and a giftcard that could be used to get malicious software onto someone's computer when used are good examples of baiting.  When someone intentionally leaves good looking items to be used by victims.
 
 Q: What is Tailgating?
 I: Driving too close behind another vehicle.
-C: An unauthorised person gains access to a restricted area typically by following an authorised person in.
+C: An unauthorized person gains access to a restricted area typically by following an authorized person in.
 I: An email seems to be from a trusted organization but is not.
 I: A caller tried to trick someone into giving up personal information.
-E: Tailgating is when an attacker uses physical social interaction to try to slip into a restricted area by sticking close to an aunthorized person.
+E: Tailgating is when an attacker uses physical social interaction to try to slip into a restricted area by sticking close to an authorized person.
 
-Q: As your entering your workplace, someone a bit behidn you yells out to hold the door for a second.  The building requires an id to get in.  What should you do?
-I: Hold the door for them since its polite.
-I: Hold the door but make sure ot get their name in case they're a malicious person
+Q: As you're entering your workplace, someone a bit behind you yells out to hold the door for a second.  The building requires an id to get in.  What should you do?
+I: Hold the door for them since it's polite.
+I: Hold the door but make sure to get their name in case they're a malicious person
 C: Don't hold the door.  Make sure they use their id to get in.
 I: Hold the door but ask to see their id to make sure.
-E: You can't be sure that someone who wnats into the building is someone who should be in the building.  Even checking if they have an id shouldn't be trusted sinc eit could be faked.  Make sure they get in the buidling after scanning their id.
+E: You can't be sure that someone who wants into the building is someone who should be in the building.  Even checking if they have an id shouldn't be trusted since it could be faked.  Make sure they get in the building after scanning their id.
 
-Q: Your entering your workplace and your coworker is entering with someone who you've never seen before.  You inquire who they are and are told they're a freind who wnated to see the inside of the building.  What potential social engineering risk does this have?
-I: No risk at all, its great to show a friend around the workplace.
-C: Theres a risk that even though they may seem like a friend, they actually ahve malicious intent inside the building.
-I: Its possible that they are sick.
+Q: You're entering your workplace and your coworker is entering with someone who you've never seen before.  You inquire who they are and are told they're a friend who wanted to see the inside of the building.  What potential social engineering risk does this have?
+I: No risk at all, it's great to show a friend around the workplace.
+C: There's a risk that even though they may seem like a friend, they actually have malicious intent inside the building.
+I: It's possible that they are sick.
 I: They could distract the workforce from doing their job.
-E: Anyone let into the buidling without proper authorization could be there for malicious reasons.  Even close friends shouldn't be let in without authorization.
+E: Anyone let into the building without proper authorization could be there for malicious reasons.  Even close friends shouldn't be let in without authorization.
+
+Q: Would you be comfortable providing your personal information to enhance the effectiveness of this assessment for future participants?
+I: Yes, sharing my information could help improve the test and doesn't pose any risks.
+I: Sure, if it helps the test improve, I don't see why not.
+I: Yes, if it makes the test better for others, my personal information can be useful.
+C: No, it is unsafe to share personal information as it could lead to misuse or compromise of my data.
+E: You should only share personal information as needed, even a trustworthy test like this could abuse your information.
+
+Q: You receive an email from what appears to be your bank, informing you that suspicious activity has been detected on your account. The email includes a link asking you to verify your account by logging in immediately. What should you do?
+I: Click on the link in the email and follow the instructions to secure your account.
+C: Contact your bank directly using a phone number from their official website to inquire about suspicious activity, instead of clicking on any links in the email.
+I: Forward the email to a friend who knows more about computers to check if it's legitimate.
+I: Ignore the email since your bank would call you instead of emailing.
+E: You should always verify the legitimacy of an email that seems suspicious by contacting the sender through their official contact.
+
+Q: During a work conference, you leave your laptop in a common area while taking a quick break. When you return, you notice a new USB drive plugged into it. What should you do?
+C: Immediately unplug the USB drive and report the incident to your IT department for further analysis.
+I: Check the contents of the USB drive to see if someone left important files on it.
+I: Leave the USB drive plugged in; maybe someone from IT is doing updates.
+I: Take the USB drive home to investigate its contents on your personal computer.
+E: Never trust a usb from an unknown source and make sure not to interact with it on your computer.  Opening files on it could lead to more issues.  Be safe by making IT aware of the potentially dangerous usb.
+
+Q: You receive a text message from an unknown number claiming that your package delivery has failed and that you need to click a link to reschedule the delivery. The message provides a link to what looks like a delivery service's website. What should you do?
+I: Click on the link to immediately reschedule the delivery, ensuring you don’t miss your package.
+I: Copy the link and open it in an incognito page.
+I: Forward the message to a friend who might know whether it’s legitimate or not.
+C: Verify the delivery status directly through the official website.
+E: Don’t trust links from unknown numbers.  You should always be able to verify a package delivery through the official means instead of a texted link.
+
+Q: While browsing online, a pop-up window appears claiming that your computer is infected with a virus and provides a phone number for tech support and a link to antivirus software.  What should you do?
+I: Call the phone number provided in the pop-up to get help from tech support.
+C: Run a trusted antivirus software you already have installed.
+I: Download the antivirus software.
+I: Ignore it completely.
+E: You shouldn’t trust random popups.  If there’s a concern about a virus you should run your trusted antivirus software.
+
+Q: During an ordinary workday, you receive an email with an invitation to an exclusive virtual conference for industry leaders. The email looks professional and includes logos of well-known companies. It asks you to download an attached file to see the event schedule and details. What should you do?
+I: Download the attachment immediately to ensure your spot at the conference, as it seems like a great networking opportunity.
+I: Forward the email to your colleagues to see if they received similar invitations and are planning to attend.
+C: Verify the authenticity of the conference by contacting the organizers through official channels or checking their website.
+I: Reply to the email asking for more information about the conference and the other attendees to gauge its legitimacy.
+E: It is common for malicious emails to disguise themselves as important companies.  You should check the company’s official websites to contact them directly to ensure that it is legitimate.
+
+Q: You get an email from someone who says they are the CEO of your company.  They request to be sent details on what you do at the company since they want to promote you.  You’ve never been emailed from this address before.  What should you do?
+I: Provide the requested information promptly.
+I: Send a summary of the confidential information, trying to help without revealing too much.
+I: Ignore the message since you feel uncomfortable sharing sensitive information without direct, in-person confirmation.
+C: Verify the email address by asking your manager if the email is legitimate.
+E: You should never immediately give information to an email without checking that it is from who it claims it is.
+
+Q: You receive an email from a coworker's account asking you to review a document attached to the email.  You weren’t expecting a review from them.  What should you do?
+I: Review the document for them.
+C: Approach the coworker to verify the email in person or ask a manager.
+I: Respond that you don’t want to.
+I: Download the document onto a usb so it’s safe.
+E: If you aren’t expecting a download in an email from someone, a safe way to make sure they really sent it is to ask them or someone in charge of them.
+
+Q: While on vacation, you receive a phone call from someone claiming to be from your insurance company. They inform you that there has been a data breach, and they need to verify your account details to protect you from any potential fraud.  What should you do?
+C: Refuse to provide any details over the phone and inform the caller that you will contact the insurance company directly.
+I: Tell the caller you're on vacation and ask them to call back later, giving you time to think about the request.
+I: Ask the caller to provide more details about the breach to assess if the information sounds legitimate.
+I: Provide the policy number and personal details over the phone to help secure your account.
+E: Calling back through official known numbers to verify issues with your account is a good way to make sure you don’t give information to the wrong people.
+
+Q: You receive a phone call at work from someone claiming to be a senior executive at your company. The caller says they're conducting a confidential audit and urgently need access to specific financial reports and employee data. They pressure you to bypass normal security procedures due to the urgency and sensitivity of the request. What should you do?
+I: Comply with the request immediately.
+I: Provide non-sensitive information first to show willingness to help while you verify their identity.
+C: Refuse to provide any information over the phone and contact your direct supervisor or the company's security office to confirm the legitimacy of the request.
+I: Ask the caller for their email to send the information directly, assuming that an email request would be more secure.
+E: Urgency is one of the most common Social Engineering techniques.  Make sure to take your time to verify legitimacy and contact the correct people in charge.
+
+Q: You receive an email from a contact claiming to be stranded overseas. They state they've lost their wallet and need money wired immediately to help them return home.  What should you do?
+I: Wire the money immediately to help your contact.
+C: Ignore the email since it’s very suspicious.
+I: Reply to the email, asking for more details about where they are and how they lost their wallet to confirm their story.
+I: Forward the email to other friends or family members to see if they can help.
+E: You should never trust random emails requesting money.  Many email scams make up situations to trick you into wanting to help people.
