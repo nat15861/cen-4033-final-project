@@ -123,6 +123,8 @@ public class QuizManager : MonoBehaviour
 
         float points = CalculatePoints(userAnswers);
 
+        print("test");
+        print(PlayerManager.instance);
         PlayerManager.instance.AddQuestionResponse(new QuestionResponse(currentQuestion, userAnswers, points));
 
         score += points;
