@@ -13,6 +13,8 @@ public class MainMenuManager : MonoBehaviour
     public GameObject signedInDisplay;
 
     public GameObject accountWindow;
+
+    public GameObject creditsWindow;
     
     public State state = State.Login;
 
@@ -95,14 +97,14 @@ public class MainMenuManager : MonoBehaviour
 
         signedInDisplay.SetActive(false);
 
-        //accountOptions.SetActive(true);
+        creditsWindow.SetActive(true);
 
         state = State.Credits;
     }
 
     public void CloseCredits()
     {
-        //accountOptions.SetActive(false);
+        creditsWindow.SetActive(false);
 
         menuOptions.SetActive(true);
 
